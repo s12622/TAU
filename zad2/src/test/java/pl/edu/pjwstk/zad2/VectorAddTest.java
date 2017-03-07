@@ -15,7 +15,7 @@ public class VectorAddTest{
 
 
     @org.junit.Test
-    public void firstAddVectorTest() {
+    public void firstAddVectorTest() throws VectorException{
         List<Double> wektor1 = new ArrayList<Double>();
         List<Double> wektor2 = new ArrayList<Double>();
         List<Double> wektor3 = new ArrayList<Double>();
@@ -33,17 +33,12 @@ public class VectorAddTest{
         wektor3.add(10.7);
         wektor3.add(6.5);
 
-        try {
-            assertEquals(wektor3, wektor.addVectors(wektor1, wektor2));
-        } catch (VectorException e) {
-//            e.printStackTrace();
-            assertFalse(true);
-        }
+        assertEquals(wektor3, wektor.addVectors(wektor1, wektor2));
 
     }
 
     @org.junit.Test
-    public void secondAddVectorTest() {
+    public void secondAddVectorTest() throws VectorException{
         List<Double> wektor1 = new ArrayList<Double>();
         List<Double> wektor2 = new ArrayList<Double>();
         List<Double> wektor3 = new ArrayList<Double>();
@@ -61,12 +56,8 @@ public class VectorAddTest{
         wektor3.add(7.7);
         wektor3.add(9.5);
 
-        try {
-            assertEquals(wektor3, wektor.addVectors(wektor1, wektor2));
-        } catch (VectorException e) {
-//            e.printStackTrace();
-            assertFalse(true);
-        }
+        assertEquals(wektor3, wektor.addVectors(wektor1, wektor2));
+
 
     }
 }

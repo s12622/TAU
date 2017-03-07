@@ -4,7 +4,8 @@ target
 .classpath
 .project
 /target/
-
+/out/
+*.iml
 # compiled output
 /dist
 /tmp

@@ -15,13 +15,13 @@ public class AlarmClockSteps {
     Alarm alarm;
     Time time;
 
-    @Given("Given there is a $time")
+    @Given("there is a $time")
     public void setTime(String time)
     {
         alarm.setTime(time);
     }
 
-    @When("When clock was given an $alarmTime")
+    @When("clock was given an $alarmTime")
     public void alarmsAdded(String alarmTime)
     {
         alarm = new AlarmClock();
@@ -30,7 +30,7 @@ public class AlarmClockSteps {
         alarm.addAlarmTime(time.toString());
     }
 
-    @Then("Then clock should ring: $summary")
+    @Then("clock should ring: $summary")
     public void summary(Boolean summary)
     {
         assertEquals(summary, alarm.alarmRing());

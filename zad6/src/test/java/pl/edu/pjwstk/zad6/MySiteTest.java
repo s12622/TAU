@@ -59,7 +59,7 @@ public class MySiteTest {
         screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         assertNotNull(screenshot);
         element = driver.findElement(By.id("błąd"));
-        FileUtils.copyFile(screenshot, new File("/home/adrian/zad5/nieudane.png"));
+        FileUtils.copyFile(screenshot, new File("target/nieudane.png"));
         assertEquals(element.isDisplayed(), true);
         assertEquals(element.getAttribute("id"), "błąd");
 
@@ -74,7 +74,7 @@ public class MySiteTest {
         screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         assertNotNull(screenshot);
         element = driver.findElement(By.linkText("Wyloguj"));
-        FileUtils.copyFile(screenshot, new File("/home/adrian/zad5/zalogowany.png"));
+        FileUtils.copyFile(screenshot, new File("target/zalogowany.png"));
         assertEquals(element.isDisplayed(), true);
         assertEquals(element.getText(), "Wyloguj");
 
@@ -91,19 +91,8 @@ public class MySiteTest {
         driver.get("http://szuflandia.pjwstk.edu.pl/~s12622/WPR/Projekt/admin.php");
         screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         assertNotNull(screenshot);
-        FileUtils.copyFile(screenshot, new File("/home/adrian/zad5/sesja.png"));
+        FileUtils.copyFile(screenshot, new File("target/sesja.png"));
         assertEquals(session_id.getValue().length() > 0, true);
     }
 
-//    @Test
-//    public void clickAndSelectTab() throws IOException {
-//        driver.get("http://szuflandia.pjwstk.edu.pl/~s12622/WPR/Projekt/projekt.php");
-//        // tab
-//        WebElement e;
-//        e = driver.findElement(By.id("powitanie"));
-//        assertEquals(e.getText(), "Witaj w mojej księdze gości");
-//        File screenshot =
-//                ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        FileUtils.copyFile(screenshot, new File("bss.1.png"));
-//    }
 }

@@ -39,7 +39,7 @@ public class MySiteTest {
         caps.setCapability("takesScreenshot", true);
         caps.setCapability(
                 PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                "phantomjs"
+                "/tmp/phantomjs"
         );
         driver = new PhantomJSDriver(caps);
     }

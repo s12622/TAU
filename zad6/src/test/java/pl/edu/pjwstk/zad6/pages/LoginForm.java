@@ -7,6 +7,7 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
@@ -56,4 +57,19 @@ public class LoginForm extends WebDriverPage {
         assertEquals(session_id.getValue().length() > 0, true);
         return session_id.getValue().length() > 0;
     }
+
+//    public Boolean sessionCheck(Boolean sessionId) {
+//        Boolean mark = false;
+//        Set<Cookie> session = manage().getCookies();
+//        Cookie sesja;
+//        for(Cookie c : session){
+//            if(c.toString().contains("PHPSESSID")){
+//                System.out.print("Lol");
+//                Cookie session_id = manage().getCookieNamed("PHPSESSID");
+//                assertEquals(session_id.getValue().length() > 0, true);
+//                mark = true;
+//            }
+//        }
+//        return mark;
+//    }
 }

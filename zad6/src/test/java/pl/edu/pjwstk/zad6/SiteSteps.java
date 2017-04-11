@@ -60,8 +60,8 @@ public class SiteSteps {
         pages.homepage().userClicksAdministratorPanelLink(administratorPanelText);
     }
 
-    @Then("session is restored and session id's length is greater than 0: $sessionLengthBool")
-    public void sessionIdLengthIsGreater(Boolean $sessionLengthBool) {
-        pages.loginform().sessionIdLengthIsGreater($sessionLengthBool);
+    @Then("session is restored and it exists: $sessionLengthBool")
+    public void sessionIdLengthIsGreater(Boolean sessionLengthBool) {
+        pages.loginform().sessionIdLengthIsGreater(sessionLengthBool);
     }
 }

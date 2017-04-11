@@ -22,5 +22,5 @@ Given user is on login form page
 Then site contains link with text: Wyloguj
 When user clicks on link with text: Strona główna
 Then user clicks on link with text: Panel administracyjny
-Then session is restored and session id's length is greater than 0: true
+Then session is restored and it exists: true
 

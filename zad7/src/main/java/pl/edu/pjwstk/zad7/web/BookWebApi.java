@@ -74,13 +74,14 @@ public class BookWebApi {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @ResponseBody
-    public void updateBook(@PathVariable("id") long id, @ModelAttribute Book book) {
+    public String updateBook(@PathVariable("id") long id, @RequestBody Book book) {
         Book model = new Book();
         model.setAuthor(book.getAuthor());
         model.setTitle(book.getTitle());
         model.setIsbn(book.getIsbn());
         model.setId(id);
         bookManager.updateBook(model);
+        return "Book of id " + id + " updated. " + model.getAuthor() + ", " + model.getTitle() + ", " + model.getIsbn();
     }
 
 
@@ -91,7 +92,8 @@ public class BookWebApi {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @ResponseBody
-    public void deleteBook(@PathVariable long id) {
+    public String deleteBook(@PathVariable long id) {
         bookManager.deleteBook(id);
+        return "Book of id " + id + " has been deleted";
     }
 }

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <BOOK ISBN="978-8380082205" TITLE="Harry Potter i Zakon Feniksa" APPROVED="false"/>
+    <BOOK ISBN="978-0061122415" TITLE="The Alchemist" APPROVED="true"/>
+    <BOOK ISBN="978-0451169518" TITLE="It" APPROVED="false"/>
+</dataset>

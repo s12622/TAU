@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <BOOK ID="3" ISBN="978-0061122415" TITLE="The Alchemist" APPROVED="true"/>
+    <BOOK ID="4" ISBN="978-0451169518" TITLE="It" APPROVED="false"/>
+    <AUTHOR ID="3" NAME="Paulo Coelho" IDNUMBER="1234"/>
+    <AUTHOR ID="4" NAME="Stephen King" IDNUMBER="5678"/>
+    <AUTHOR_BOOK BOOKS_ID="3" AUTHOR_ID="3"/>
+</dataset>

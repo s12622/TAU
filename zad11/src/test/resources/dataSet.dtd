@@ -1,0 +1,25 @@
+<!ELEMENT dataset (
+        BOOK*,
+        AUTHOR*,
+        AUTHOR_BOOK*)>
+
+        <!ELEMENT BOOK EMPTY>
+        <!ATTLIST BOOK
+                ID CDATA #REQUIRED
+                WRITE CDATA #IMPLIED
+                TITLE CDATA #IMPLIED
+                APPROVED CDATA #IMPLIED
+                >
+
+        <!ELEMENT AUTHOR EMPTY>
+        <!ATTLIST AUTHOR
+                ID CDATA #REQUIRED
+                NAME CDATA #IMPLIED
+                IDNUMBER CDATA #REQUIRED
+                >
+
+        <!ELEMENT AUTHOR_BOOK EMPTY>
+        <!ATTLIST AUTHOR_BOOK
+                BOOKS_ID CDATA #REQUIRED
+                AUTHOR_ID CDATA #REQUIRED
+                >

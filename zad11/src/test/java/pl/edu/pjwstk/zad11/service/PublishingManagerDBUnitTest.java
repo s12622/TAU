@@ -134,4 +134,27 @@ public class PublishingManagerDBUnitTest {
         assertEquals(true, b.getApproved());
     }
 
+    @Test
+    @DatabaseSetup("/fullData.xml")
+    public void getAuthorsCheck() {
+        assertEquals(2, publishingManager.getAllAuthors().size());
+    }
+
+    @Test
+    @DatabaseSetup("/fullData.xml")
+    public void getBooksCheck() {
+        assertEquals(1, publishingManager.getAllBooks().size());
+    }
+
+    @Test
+    @DatabaseSetup("/fullData.xml")
+    public void getAllBooksCHeck() {
+        List<Author> authors = publishingManager.getAllAuthors();
+        int notPublishedBooks = publishingManager.getAllBooks().size();
+        int publishedBooks = 0;
+        for(Author author: authors) {
+            publishedBooks += author.getBooks().size();
+        }
+        assertEquals(2, notPublishedBooks + publishedBooks);
+    }
 }

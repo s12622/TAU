@@ -28,7 +28,7 @@ public class BookManagerTest {
 
     private final static String AUTHOR_2 = "Caulo Poelho";
     private final static String TITLE_2 = "Tested";
-    private final static String ISBN_2 = "1234567890";
+    private final static String ISBN_2 = "0601123517";
 
     public BookManagerTest() throws SQLException {
     }
